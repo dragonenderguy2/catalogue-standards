@@ -14,3 +14,9 @@ mongoose.connect('mongodb://localhost:27017/catalogue-standards', { useNewUrlPar
     });
   })
   .catch(err => console.error('Erreur de connexion à MongoDB:', err)); // Error handling for connection issues
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Erreur interne du serveur'); // Send generic error message to client
+});
