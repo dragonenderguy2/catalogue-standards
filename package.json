@@ -4,7 +4,7 @@
   "description": "Un outil de gestion et de catalogage des normes ouvertes pour faciliter l'accès et la compréhension des utilisateurs.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node index.js",  // Exécute l'application
     "test": "mocha"  // Utiliser Mocha pour les tests
   },
   "dependencies": {
